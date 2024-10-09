@@ -2,7 +2,9 @@
 
 @section('title', 'Editar Usuário')
 @section('content')
-<h1>Editar Usuário {{ $user->name }}</h1>
+<div class="flex justify-between items-center mt-2">
+    <h1 class="text-2xl font-bold text-white">Editar Usuário {{ $user->name }}</h1>
+</div>
 
 <form action="{{ route('users.update', $user->id) }}" method="POST">
     @method('PUT')
