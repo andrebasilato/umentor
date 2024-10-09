@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->boolean('situation')->default(true);
             $table->date('admission_at')->nullable();
+            $table->softDeletes();
         });
     }
 

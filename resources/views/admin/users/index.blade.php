@@ -26,8 +26,13 @@
                 <td>{{ $user->email }}</td>
                 <td>{{ $user->situation }}</td>
                 <td>
+                    <a href="#">Info</a>
                     <a href=" {{ route('users.edit', $user->id) }} ">Editar</a>
-                    <a href="-">Excluir</a>
+                    <form action="{{ route('users.destroy', $user->id) }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <button type="submit">Deletar</button>
+                    </form>
                 </td>
             </tr>
         @empty
