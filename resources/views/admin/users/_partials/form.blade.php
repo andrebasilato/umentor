@@ -15,6 +15,20 @@
 </div>
 
 <div class="mb-4">
+    <label for="cep" class="block text-sm font-medium text-gray-700 dark:text-gray-300">CEP</label>
+    <input type="text" name="cep" id="cep" value="{{ $user->cep ?? old('cep') }}"
+        placeholder="Exemplo: 12345678" onblur="buscaCep()"
+        class="mt-1 block w-full rounded-md border-gray-300 dark:bg-gray-700 dark:text-gray-300 focus:ring-blue-500 focus:border-blue-500">
+</div>
+
+<div class="mb-4">
+    <label for="city" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Cidade</label>
+    <input type="text" name="city" id="city" value="{{ $user->city ?? old('city') }}"
+        readonly placeholder="Preenchimento Automático"
+        class="mt-1 block w-full rounded-md border-gray-300 dark:bg-gray-700 dark:text-gray-300 focus:ring-blue-500 focus:border-blue-500">
+</div>
+
+<div class="mb-4">
     <label for="password" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Senha</label>
     <input type="password" name="password" id="password" placeholder="*********"
         class="mt-1 block w-full rounded-md border-gray-300 dark:bg-gray-700 dark:text-gray-300 focus:ring-blue-500 focus:border-blue-500">
