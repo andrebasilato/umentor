@@ -32,6 +32,17 @@ class UserController extends Controller
         return view('admin.users.edit', compact('user'));
     }
 
+    public function show(int $id)
+    {
+        if (!$user = User::find($id)) {
+            return redirect()
+                ->route('users.index')
+                ->with('error', 'Usuário não encontrado!');
+        }
+
+        return view('admin.users.show', compact('user'));
+    }
+
     public function update(UpdateUserRequest $request, int $id)
     {
         if (!$user = User::find($id)) {
@@ -44,6 +55,10 @@ class UserController extends Controller
         }
 
         $user->update($data);
+
+        return redirect()
+            ->route('users.index')
+            ->with('success', 'Usuário atualizado com Sucesso!');
     }
 
     public function store(StoreUserRequest $request)

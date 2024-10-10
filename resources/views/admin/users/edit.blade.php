@@ -2,7 +2,7 @@
 
 @section('title', 'Editar Usuário')
 @section('content')
-<div class="flex justify-between items-center mt-2">
+<div class="flex justify-between items-center mt-2 mb-5">
     <h1 class="text-2xl font-bold text-white">Editar Usuário {{ $user->name }}</h1>
 </div>
 

@@ -31,14 +31,14 @@
                                 <td class="px-6 py-3">{{ $user->email }}</td>
                                 <td class="px-6 py-3">{{ $user->situation }}</td>
                                 <td class="px-6 py-3 justify-center flex">
-                                    <a href="#" class="text-blue-500 hover:text-blue-700"><i
+                                    <a href="{{ route('users.show', $user->id) }}" class="text-blue-500 hover:text-blue-700" title="Detalhes do Usuário"><i
                                             class="fas fa-info-circle px-2"></i></a>
                                     <a href="{{ route('users.edit', $user->id) }}"
-                                        class="text-yellow-500 hover:text-yellow-700"><i class="fas fa-edit px-2"></i></a>
+                                        class="text-yellow-500 hover:text-yellow-700" title="Editar Usuário"><i class="fas fa-edit px-2"></i></a>
                                     <form action="{{ route('users.destroy', $user->id) }}" method="POST" class="inline">
                                         @csrf
                                         @method('delete')
-                                        <button type="submit" class="text-red-500 hover:text-red-700">
+                                        <button type="submit" class="text-red-500 hover:text-red-700" title="Deletar Usuário">
                                             <i class="fas fa-trash-alt px-2"></i>
                                         </button>
                                     </form>
