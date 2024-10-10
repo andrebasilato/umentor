@@ -25,21 +25,16 @@
         }
 
         setTimeout(() => {
-            const successAlert = document.getElementById('toast-success');
-            const warningAlert = document.getElementById('toast-warning');
-            const dangerAlert = document.getElementById('toast-danger');
-
-            if (successAlert) {
-                successAlert.style.display = 'none';
-            }
-            if (warningAlert) {
-                warningAlert.style.display = 'none';
-            }
-            if (dangerAlert) {
-                dangerAlert.style.display = 'none';
-            }
+            const alerts = ['toast-success', 'toast-warning', 'toast-danger'];
+            alerts.forEach(id => {
+                const alert = document.getElementById(id);
+                if (alert && alert.style.display !== 'none') {
+                    alert.style.display = 'none';
+                }
+            });
         }, 3000);
     </script>
+
 </body>
 
 </html>

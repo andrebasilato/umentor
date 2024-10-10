@@ -29,7 +29,7 @@
                                 <td class="px-6 py-3">{{ $user->id }}</td>
                                 <td class="px-6 py-3">{{ $user->name }}</td>
                                 <td class="px-6 py-3">{{ $user->email }}</td>
-                                <td class="px-6 py-3">{{ $user->situation }}</td>
+                                <td class="px-6 py-3"> {{ $user->situation == 1 ? 'Ativo' : 'Inativo' }} </td>
                                 <td class="px-6 py-3 justify-center flex">
                                     <a href="{{ route('users.show', $user->id) }}" class="text-blue-500 hover:text-blue-700" title="Detalhes do Usuário"><i
                                             class="fas fa-info-circle px-2"></i></a>
