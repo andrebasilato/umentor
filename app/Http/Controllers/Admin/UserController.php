@@ -49,7 +49,7 @@ class UserController extends Controller
             return back()->with('message', 'Usuário não encontrado!');
         }
 
-        $data = $request->only('name', 'email', 'situation', 'admission_at');
+        $data = $request->only('name', 'email', 'situation', 'admission_at', 'cep', 'city');
         if ($request->password) {
             $data['password'] = bcrypt($request->password);
         }

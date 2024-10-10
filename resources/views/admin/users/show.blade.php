@@ -20,6 +20,15 @@
         <p class="mt-1 text-sm text-gray-900 dark:text-gray-200">{{ $user->situation ? 'Ativo' : 'Inativo' }}</p>
     </div>
     <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">CEP:</label>
+        <p class="mt-1 text-sm text-gray-900 dark:text-gray-200">{{ $user->cep }}</p>
+    </div>
+    <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Cidade:</label>
+        <p class="mt-1 text-sm text-gray-900 dark:text-gray-200">{{ $user->city }}</p>
+    </div>
+
+    <div class="mb-4">
         <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Data de Admissão:</label>
         <p class="mt-1 text-sm text-gray-900 dark:text-gray-200">{{ $user->admission_at }}</p>
     </div>

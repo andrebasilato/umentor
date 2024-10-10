@@ -23,6 +23,8 @@ class User extends Authenticatable
         'password',
         'situation',
         'admission_at',
+        'cep',
+        'city'
     ];
 
     /**

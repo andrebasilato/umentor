@@ -27,6 +27,8 @@ class StoreUserRequest extends FormRequest
             'email'         => ['required', 'string', 'email', Rule::unique('users','email')->ignore($this->user, 'id')],
             'password'      => 'required|min:6',
             'admission_at'  => 'required|date',
+            'cep'           => 'nullable|string|max:8',
+            'city'          => 'nullable|string|max:255',
         ];
     }
 }

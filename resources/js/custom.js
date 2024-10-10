@@ -16,7 +16,6 @@ setTimeout(() => {
 }, 3000);
 
 window.buscaCep = async function() {
-    console.log("andre");
     const cep = document.getElementById("cep").value;
     if (cep.length !== 8) {
         alert("CEP deve conter 8 caracteres!");
